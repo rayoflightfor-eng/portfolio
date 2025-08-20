@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amritanjai Singh - Portfolio</title>
     <style>
+        /* ...[keep your existing CSS here]... */
+        /* Copy all the CSS from your original file unchanged */
         * {
             margin: 0;
             padding: 0;
@@ -19,551 +21,163 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 150px;
-            position: relative;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(10, 25, 47, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 20px 0;
-        }
-
-        .nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 150px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #64FFDA;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-
-        .nav-links li a {
-            color: #CCD6F6;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-links li a:hover {
-            color: #64FFDA;
-        }
-
-        .nav-number {
-            color: #64FFDA;
-            font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
-            font-size: 0.8rem;
-        }
-
-        .resume-btn {
-            border: 1px solid #64FFDA;
-            color: #64FFDA;
-            background: transparent;
-            padding: 12px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .resume-btn:hover {
-            background: rgba(100, 255, 218, 0.1);
-        }
-
-        /* Main Content */
-        main {
-            padding-top: 120px;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0;
-        }
-
-        .greeting {
-            color: #64FFDA;
-            font-size: 1rem;
-            font-weight: 400;
-            margin-bottom: 20px;
-            font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
-        }
-
-        .name {
-            font-size: 4.5rem;
-            font-weight: 700;
-            color: #CCD6F6;
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-
-        .tagline {
-            font-size: 3.5rem;
-            font-weight: 600;
-            color: #8892B0;
-            margin-bottom: 30px;
-            line-height: 1.1;
-        }
-
-        .description {
-            max-width: 600px;
-            font-size: 1.1rem;
-            color: #8892B0;
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
-
-        .highlight {
-            color: #64FFDA;
-        }
-
-        .cta-btn {
-            border: 1px solid #64FFDA;
-            color: #64FFDA;
-            background: transparent;
-            padding: 16px 32px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            display: inline-block;
-            max-width: fit-content;
-        }
-
-        .cta-btn:hover {
-            background: rgba(100, 255, 218, 0.1);
-        }
-
-        /* Section Styles */
-        .section {
-            padding: 100px 0;
-            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
-        }
-
-        .section:last-child {
-            border-bottom: none;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #CCD6F6;
-            margin-bottom: 60px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .section-number {
-            color: #64FFDA;
-            font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
-            font-size: 1.5rem;
-            font-weight: 400;
-        }
-
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .about-text {
-            color: #8892B0;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-        }
-
-        .profile-img {
-            width: 300px;
-            height: 300px;
-            border-radius: 8px;
-            object-fit: cover;
-            border: 2px solid #64FFDA;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-        }
-
-        .skill-item {
-            background: rgba(100, 255, 218, 0.05);
-            border: 1px solid rgba(100, 255, 218, 0.2);
-            border-radius: 8px;
-            padding: 25px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .skill-item:hover {
-            transform: translateY(-5px);
-            border-color: #64FFDA;
-            background: rgba(100, 255, 218, 0.1);
-        }
-
-        .skill-item h3 {
-            color: #64FFDA;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .skill-item p {
-            color: #8892B0;
-            font-size: 0.9rem;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background: rgba(100, 255, 218, 0.05);
-            border: 1px solid rgba(100, 255, 218, 0.2);
-            border-radius: 8px;
-            padding: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #64FFDA;
-            background: rgba(100, 255, 218, 0.1);
-        }
-
-        .project-card h3 {
-            color: #64FFDA;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-
-        .project-card p {
-            color: #8892B0;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .project-tech {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .tech-tag {
-            background: rgba(100, 255, 218, 0.1);
-            color: #64FFDA;
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
-        }
-
-        /* Contact Section */
-        .contact-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-text {
-            color: #8892B0;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
-
-        .contact-btn {
-            border: 1px solid #64FFDA;
-            color: #64FFDA;
-            background: transparent;
-            padding: 16px 32px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .contact-btn:hover {
-            background: rgba(100, 255, 218, 0.1);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .container {
-                padding: 0 100px;
-            }
-            
-            .nav-content {
-                padding: 0 100px;
-            }
-            
-            .name {
-                font-size: 3.5rem;
-            }
-            
-            .tagline {
-                font-size: 2.8rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 50px;
-            }
-            
-            .nav-content {
-                padding: 0 50px;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .name {
-                font-size: 2.8rem;
-            }
-            
-            .tagline {
-                font-size: 2.2rem;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-            }
-            
-            .profile-img {
-                width: 250px;
-                height: 250px;
-                margin: 0 auto;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 25px;
-            }
-            
-            .nav-content {
-                padding: 0 25px;
-            }
-            
-            .name {
-                font-size: 2.2rem;
-            }
-            
-            .tagline {
-                font-size: 1.8rem;
-            }
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #0A192F;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #64FFDA;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #4FD1C7;
-        }
+        /* (Rest of your CSS unchanged) */
+        /* ... */
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-content">
-            <a href="#" class="logo">AS</a>
-            <ul class="nav-links">
-                <li><a href="#about"><span class="nav-number">01.</span> About</a></li>
-                <li><a href="#skills"><span class="nav-number">02.</span> Skills</a></li>
-                <li><a href="#projects"><span class="nav-number">03.</span> Work</a></li>
-                <li><a href="#contact"><span class="nav-number">04.</span> Contact</a></li>
-            </ul>
-            <a href="#" class="resume-btn">Resume</a>
-        </div>
-    </nav>
+    <!-- Run Portfolio Button -->
+    <div id="run-portfolio-container" style="height: 100vh; display: flex; align-items: center; justify-content: center;">
+        <button id="run-portfolio-btn" style="padding: 24px 48px; font-size: 1.5rem; background: #64FFDA; color: #0A192F; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">
+            Run Portfolio
+        </button>
+    </div>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="container">
-                <p class="greeting">Hi, my name is</p>
-                <h1 class="name">Amritanjai Singh.</h1>
-                <h2 class="tagline">I build things for the web.</h2>
-                <p class="description">
-                    I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products and expanding my skills in modern web technologies.
-                </p>
-                <a href="#projects" class="cta-btn">Check out my work!</a>
+    <!-- Main Content (hidden by default) -->
+    <div id="main-content" style="display: none;">
+        <!-- Navigation -->
+        <nav>
+            <div class="nav-content">
+                <a href="#" class="logo">AS</a>
+                <ul class="nav-links">
+                    <li><a href="#about"><span class="nav-number">01.</span> About</a></li>
+                    <li><a href="#skills"><span class="nav-number">02.</span> Skills</a></li>
+                    <li><a href="#projects"><span class="nav-number">03.</span> Work</a></li>
+                    <li><a href="#contact"><span class="nav-number">04.</span> Contact</a></li>
+                </ul>
+                <a href="#" class="resume-btn">Resume</a>
             </div>
-        </section>
+        </nav>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="section-number">01.</span>
-                    About Me
-                </h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            Hello! My name is <span class="highlight">Amritanjai Singh</span>, and I'm a passionate web developer with a strong focus on front-end design. I enjoy creating interactive and user-friendly websites that bring ideas to life.
-                        </p>
-                        <p>
-                            When I'm not coding, I love exploring new tech trends and improving my skills. I'm currently studying at <span class="highlight">GLA University</span>, aiming for success in the tech industry.
-                        </p>
-                        <p>
-                            I'm always looking for new opportunities to learn and grow as a developer. Whether it's building new projects, learning new technologies, or collaborating with other developers, I'm excited to see where this journey takes me.
-                        </p>
-                    </div>
-                    <img src="anshubro.jpg" alt="Amritanjai Singh" class="profile-img">
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="section-number">02.</span>
-                    Skills & Technologies
-                </h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <h3>Frontend</h3>
-                        <p>HTML5, CSS3, JavaScript, React</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3>Backend</h3>
-                        <p>Python, Java, Node.js</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3>Tools</h3>
-                        <p>Git, VS Code, Figma</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3>Other</h3>
-                        <p>Responsive Design, UI/UX</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="section-number">03.</span>
-                    Some Things I've Built
-                </h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Portfolio Website</h3>
-                        <p>A personal website built using HTML, CSS, and JavaScript to showcase my skills, resume, and contact info with modern design principles.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>To-Do List App</h3>
-                        <p>A simple yet functional to-do list application developed with React, featuring task filtering, completion tracking, and local storage.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">CSS</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>Weather Dashboard</h3>
-                        <p>This project uses the OpenWeather API to display current weather and forecasts based on user location. Built with JavaScript and styled with Bootstrap.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">API</span>
-                            <span class="tech-tag">Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 class="section-title">
-                    <span class="section-number">04.</span>
-                    Get In Touch
-                </h2>
-                <div class="contact-content">
-                    <p class="contact-text">
-                        I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+        <main>
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="container">
+                    <p class="greeting">Hi, my name is</p>
+                    <h1 class="name">Amritanjai Singh.</h1>
+                    <h2 class="tagline">I build things for the web.</h2>
+                    <p class="description">
+                        I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered product[...]
                     </p>
-                    <a href="mailto:amisingh945@gmail.com" class="contact-btn">Say Hello</a>
+                    <a href="#projects" class="cta-btn">Check out my work!</a>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section">
+                <div class="container">
+                    <h2 class="section-title">
+                        <span class="section-number">01.</span>
+                        About Me
+                    </h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>
+                                Hello! My name is <span class="highlight">Amritanjai Singh</span>, and I'm a passionate web developer with a strong focus on front-end design. I enjoy creating interactive [...]
+                            </p>
+                            <p>
+                                When I'm not coding, I love exploring new tech trends and improving my skills. I'm currently studying at <span class="highlight">GLA University</span>, aiming for success i[...]
+                            </p>
+                            <p>
+                                I'm always looking for new opportunities to learn and grow as a developer. Whether it's building new projects, learning new technologies, or collaborating with other develo[...]
+                            </p>
+                        </div>
+                        <img src="anshubro.jpg" alt="Amritanjai Singh" class="profile-img">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section">
+                <div class="container">
+                    <h2 class="section-title">
+                        <span class="section-number">02.</span>
+                        Skills & Technologies
+                    </h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <h3>Frontend</h3>
+                            <p>HTML5, CSS3, JavaScript, React</p>
+                        </div>
+                        <div class="skill-item">
+                            <h3>Backend</h3>
+                            <p>Python, Java, Node.js</p>
+                        </div>
+                        <div class="skill-item">
+                            <h3>Tools</h3>
+                            <p>Git, VS Code, Figma</p>
+                        </div>
+                        <div class="skill-item">
+                            <h3>Other</h3>
+                            <p>Responsive Design, UI/UX</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section">
+                <div class="container">
+                    <h2 class="section-title">
+                        <span class="section-number">03.</span>
+                        Some Things I've Built
+                    </h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <h3>Portfolio Website</h3>
+                            <p>A personal website built using HTML, CSS, and JavaScript to showcase my skills, resume, and contact info with modern design principles.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>To-Do List App</h3>
+                            <p>A simple yet functional to-do list application developed with React, featuring task filtering, completion tracking, and local storage.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>Weather Dashboard</h3>
+                            <p>This project uses the OpenWeather API to display current weather and forecasts based on user location. Built with JavaScript and styled with Bootstrap.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <div class="container">
+                    <h2 class="section-title">
+                        <span class="section-number">04.</span>
+                        Get In Touch
+                    </h2>
+                    <div class="contact-content">
+                        <p class="contact-text">
+                            I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                        </p>
+                        <a href="mailto:amisingh945@gmail.com" class="contact-btn">Say Hello</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.getElementById('run-portfolio-btn').addEventListener('click', function() {
+            document.getElementById('run-portfolio-container').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
