@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amritanjai Singh - Portfolio</title>
     <style>
-        /* ...[keep your existing CSS here]... */
-        /* Copy all the CSS from your original file unchanged */
+        /* [YOUR EXISTING CSS HERE - UNCHANGED] */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
@@ -21,19 +19,25 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
-        /* (Rest of your CSS unchanged) */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 150px;
+            position: relative;
+        }
+        /* [REST OF CSS UNCHANGED] */
         /* ... */
     </style>
 </head>
 <body>
-    <!-- Run Portfolio Button -->
+    <!-- Run Portfolio Button (VISIBLE INITIALLY) -->
     <div id="run-portfolio-container" style="height: 100vh; display: flex; align-items: center; justify-content: center;">
         <button id="run-portfolio-btn" style="padding: 24px 48px; font-size: 1.5rem; background: #64FFDA; color: #0A192F; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">
             Run Portfolio
         </button>
     </div>
 
-    <!-- Main Content (hidden by default) -->
+    <!-- Main Content (HIDDEN INITIALLY) -->
     <div id="main-content" style="display: none;">
         <!-- Navigation -->
         <nav>
@@ -173,6 +177,8 @@
             </section>
         </main>
     </div>
+
+    <!-- Script to show portfolio when button is clicked -->
     <script>
         document.getElementById('run-portfolio-btn').addEventListener('click', function() {
             document.getElementById('run-portfolio-container').style.display = 'none';
